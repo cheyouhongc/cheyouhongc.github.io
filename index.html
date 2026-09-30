@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#05060a">
+    <meta name="description" content="車宥鋐（Yu-Hung Che）的個人網站。WCA 認證魔術方塊選手，主項為五魔方 Megaminx，世界紀錄 2:13.58。">
+    <title>車宥鋐 | 魔術方塊選手</title>
+
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2305060a'/><text y='72' x='50' text-anchor='middle' font-size='58'>%F0%9F%8E%AF</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ═══════════ 導航欄 ═══════════ -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo"><span data-name>車宥鋐</span></a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">首頁</a></li>
+                <li><a href="#about" class="nav-link">關於我</a></li>
+                <li><a href="#achievements" class="nav-link">賽事成績</a></li>
+                <li><a href="#gallery" class="nav-link">作品集</a></li>
+                <li><a href="#contact" class="nav-link">聯絡我</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="開啟選單" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════ Hero ═══════════ -->
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <div class="cube-icon" aria-hidden="true">
+                <div class="cube">
+                    <div class="face front"></div>
+                    <div class="face back"></div>
+                    <div class="face right"></div>
+                    <div class="face left"></div>
+                    <div class="face top"></div>
+                    <div class="face bottom"></div>
+                </div>
+            </div>
+
+            <h1 class="hero-title"><span data-name>車宥鋐</span></h1>
+            <p class="hero-subtitle" id="heroSubtitle">WCA 認證選手 · 澎湖科技大學</p>
+
+            <p class="hero-description">
+                用指尖旋轉奇蹟，讓六色方塊在幾秒內歸位。<br>
+                主項為五魔方 Megaminx — 十二面、三十角、五十四個色塊的極致考驗。
+            </p>
+
+            <!-- 數據由 script.js 的 SITE_DATA.stats 產生 -->
+            <div class="hero-stats" id="heroStats"></div>
+
+            <div class="hero-buttons">
+                <a href="#achievements" class="btn btn-primary">賽事成績</a>
+                <a href="#contact" class="btn btn-secondary">聯繫我</a>
+            </div>
+        </div>
+
+        <div class="hero-scroll" aria-hidden="true">
+            <span>向下滾動</span>
+            <div class="scroll-indicator"></div>
+        </div>
+    </header>
+
+    <!-- ═══════════ 關於我 ═══════════ -->
+    <section id="about" class="section about">
+        <div class="container">
+            <span class="section-label">About</span>
+            <h2 class="section-title">關於我</h2>
+
+            <div class="about-grid">
+                <div class="about-image" data-reveal>
+                    <img src="assets/img/wca-profile.png"
+                         alt="車宥鋐的 WCA 個人檔案截圖，記錄五魔方單人成績"
+                         class="about-photo">
+                </div>
+
+                <div class="about-text">
+                    <h3>方塊之路</h3>
+                    <p>
+                        來自澎湖科技大學的我，從第一次拿起魔術方塊開始，
+                        就被這個五彩繽紛的世界深深吸引。
+                        從新手到 WCA 認證選手，這條路我堅持走了下去。
+                        每天練習數小時，只為追求那零點零一秒的突破。
+                    </p>
+
+                    <h3>我的專長</h3>
+                    <!-- 技能條由 script.js 的 SITE_DATA.skills 產生 -->
+                    <div class="skills" id="skillsList"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ 賽事成績 ═══════════ -->
+    <section id="achievements" class="section achievements">
+        <div class="container">
+            <span class="section-label">Achievements</span>
+            <h2 class="section-title">賽事成績</h2>
+            <p class="section-subtitle">
+                以下為 WCA 官方登錄的個人紀錄，成績隨每次比賽即時更新。
+            </p>
+
+            <!-- 卡片由 script.js 的 SITE_DATA.achievements 產生 -->
+            <div class="achievements-grid" id="achievementsGrid"></div>
+        </div>
+    </section>
+
+    <!-- ═══════════ 作品集 ═══════════ -->
+    <section id="gallery" class="section gallery">
+        <div class="container">
+            <span class="section-label">Gallery</span>
+            <h2 class="section-title">精彩時刻</h2>
+            <p class="section-subtitle">
+                從 WCA 戰績、競速器材到方塊圖鑑，記錄每一次轉速的推進。
+                點擊照片可放大檢視。
+            </p>
+
+            <!-- 圖片由 script.js 的 SITE_DATA.gallery 產生 -->
+            <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+    </section>
+
+    <!-- ═══════════ 聯絡我 ═══════════ -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <span class="section-label">Contact</span>
+            <h2 class="section-title">聯絡我</h2>
+
+            <div class="contact-content">
+                <p class="contact-text">
+                    無論是比賽邀請、器材合作，還是想學魔術方塊，都歡迎與我聯繫！
+                    點擊下方任一項目即可直接聯絡。
+                </p>
+
+                <!-- 聯絡方式由 script.js 的 SITE_DATA.contact 產生 -->
+                <div class="contact-info" id="contactList"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ 頁腳 ═══════════ -->
+    <footer class="footer">
+        <div class="container">
+            <p>
+                <span class="footer-cube" aria-hidden="true"></span>
+                © <span id="footerYear">2026</span> <span data-name>車宥鋐</span>
+                <span data-name-en></span> · All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
